@@ -4,19 +4,18 @@ import { FaTwitter, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Main = () => {
   return (
-    <div id="main">
+    <div id="main" className=" h-screen">
       <img
         className="object-left w-full h-screen"
-        src="src/components/pics/ocean.jpg"
+        src="src/assets/main_background.jpg"
         alt=""
       />
       <div className="absolute top-0 left-0 w-full h-screen ">
-        <div className="  max-w-[700px] m-auto h-[75%] w-full flex flex-col justify-center  items-center ">
-          <h1 className="font-mono text-6xl font-bold text-white sm:text-5xl">
+        <div className="  max-w-[700px] m-auto h-[75%] w-full flex flex-col justify-center mt-20 items-center ">
+          <h1 className="font-mono mt-10 text-6xl font-bold text-white sm:text-5xl">
             Hi, I'm Varun
           </h1>
-	  <h1 className="text">Hello</h1>
-          <h2 className="flex pt-4 font-mono text-2xl text-white gap-3 sm:text-3xl">
+          <h2 className="flex pt-4 mt-4 font-mono text-2xl text-white gap-3 sm:text-3xl">
             I'm a
             <TypeAnimation
               sequence={[
@@ -36,8 +35,8 @@ const Main = () => {
               repeat={Infinity}
             />
           </h2>
-          <div className="mb-12 flex justify-between text-white pt-6 max-w-[200px] w-full">
-            <FaTwitter className="cursor-pointer" size={20} />
+          <div className="my-12 flex justify-between text-white pt-6 max-w-[200px] w-full">
+            <FaTwitter href="LL" className="cursor-pointer" size={20} />
             <FaGithub className="cursor-pointer" size={20} />
             <FaLinkedinIn className="cursor-pointer" size={20} />
           </div>

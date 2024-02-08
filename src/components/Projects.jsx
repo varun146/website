@@ -1,33 +1,44 @@
 import React from "react";
 
 import { projects } from "./projects.js";
-import ProjectItem from "./ProjectItem";
+import RightImage from "./RightImage.jsx";
+import LeftImage from "./LeftImage.jsx";
 
 const Projects = () => {
   return (
-    <div className="bg-gradient-to-t from-gray-600 to-white">
+    <div className="bg-[#202733]  h-[1250px] sm:h-[1600px] lg:h-[1800px] w-full">
       <div
         id="projects"
         className=" h-screen max-w-[1040px] m-auto md:pl-20 py-16"
       >
-        <h1 className="mb-10 text-4xl text-center  font-bold text-[#164863] font-mono">
+        <h1 className="mb-20 text-2xl text-center  md:text-3xl sm:text-5xl  text-white font-bold  font-mono">
           Projects
         </h1>
-        <p className="font-mono text-center ">
-          These are the projects I meticulously crafted while honing my mastery
-          in these skills.
-        </p>
-        <div className="grid sm:grid-cols-3 gap-10 grid-cols-2 p-10">
-          {projects.map((project) => {
+
+        {projects.map((project, index) => {
+          // Use index to determine whether to render RightImage or LeftImage
+          if (index % 2 === 0) {
             return (
-              <ProjectItem
+              <RightImage
+                key={index}
                 title={project.title}
-                img={project.img}
                 stack={project.stack}
+                image={project.img}
+                desc={project.desc}
               />
             );
-          })}
-        </div>
+          } else {
+            return (
+              <LeftImage
+                key={index}
+                title={project.title}
+                stack={project.stack}
+                image={project.img}
+                desc={project.desc}
+              />
+            );
+          }
+        })}
       </div>
     </div>
   );

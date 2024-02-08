@@ -1,14 +1,12 @@
 import Main from "./components/Main";
-import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
-import Skills from "./components/Skills";
+import Nav from "./components/Nav";
 import ContactForm from "./components/ContactForm";
 function App() {
   return (
     <div>
+      <Nav />
       <Main />
-      <Navbar />
-      <Skills />
       <Projects />
       <ContactForm />
     </div>
